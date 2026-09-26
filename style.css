@@ -94,35 +94,35 @@ body.zh .enter{letter-spacing:.4em;font-size:14px}
 
 /* ---------- architecture: arch, pillars, nodes, balustrades ---------- */
 :root{--shift:calc(var(--colw) * -0.5)}
-.hero::before{content:"";position:absolute;left:0;right:0;top:0;height:30px;z-index:4;background:url(images/stone.jpg) center/cover;box-shadow:0 1px 0 #A99E8C,0 4px 10px rgba(39,48,74,.1)}
+.hero::before{content:"";position:absolute;left:0;right:0;top:0;height:30px;z-index:4;background:url(stone.jpg) center/cover;box-shadow:0 1px 0 #A99E8C,0 4px 10px rgba(39,48,74,.1)}
 .arch-top,.arch-ring{position:absolute;top:0;left:calc(var(--colw) * .5 - 30px);right:calc(var(--colw) * .5 - 30px);height:max(150px,calc(var(--colw) * 1.65 + 30px));z-index:4;pointer-events:none;
   -webkit-mask-size:100% 100%;mask-size:100% 100%;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat}
-.arch-top{background:url(images/stone.jpg) center top/auto 100% repeat-x;
+.arch-top{background:url(stone.jpg) center top/auto 100% repeat-x;
   -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 300' preserveAspectRatio='none'%3E%3Cpath d='M0 0H1000V300C1000 130 660 70 500 8C340 70 0 130 0 300Z'/%3E%3C/svg%3E");mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 300' preserveAspectRatio='none'%3E%3Cpath d='M0 0H1000V300C1000 130 660 70 500 8C340 70 0 130 0 300Z'/%3E%3C/svg%3E");filter:drop-shadow(0 10px 14px rgba(39,48,74,.18))}
-.arch-ring{background:linear-gradient(180deg,rgba(255,255,255,.18),rgba(90,70,50,.18)),url(images/stone.jpg) center/auto 100% repeat-x;
+.arch-ring{background:linear-gradient(180deg,rgba(255,255,255,.18),rgba(90,70,50,.18)),url(stone.jpg) center/auto 100% repeat-x;
   -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 300' preserveAspectRatio='none'%3E%3Cpath d='M0 300C0 130 340 70 500 8C660 70 1000 130 1000 300H962C962 150 650 106 500 52C350 106 38 150 38 300Z'/%3E%3C/svg%3E");mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 300' preserveAspectRatio='none'%3E%3Cpath d='M0 300C0 130 340 70 500 8C660 70 1000 130 1000 300H962C962 150 650 106 500 52C350 106 38 150 38 300Z'/%3E%3C/svg%3E");filter:brightness(.93) drop-shadow(0 6px 8px rgba(39,48,74,.2))}
 main{position:relative;overflow-x:clip}
 .pillar{position:absolute;top:0;bottom:0;width:var(--colw);z-index:8;pointer-events:none;
-  background:url(images/shaft.jpg) center top/100% auto repeat-y;filter:drop-shadow(0 0 20px rgba(39,48,74,.16))}
+  background:url(shaft.jpg) center top/100% auto repeat-y;filter:drop-shadow(0 0 20px rgba(39,48,74,.16))}
 .pl{left:var(--shift)}
 .pr{right:var(--shift);transform:scaleX(-1)}
 .pillar .cap{position:absolute;left:50%;top:calc(var(--colw) * -0.55);z-index:2;width:calc(var(--colw) * 2.7);aspect-ratio:1020/830;transform:translateX(-50%);
-  background:url(images/capital.webp) center/100% 100% no-repeat}
+  background:url(capital.webp) center/100% 100% no-repeat}
 .pillar .base{display:none}
 .node{display:none;position:absolute;top:-10px;width:calc(var(--colw) * 1.75);aspect-ratio:940/460;z-index:9;pointer-events:none;
-  background:url(images/node.webp) center/100% 100% no-repeat;filter:drop-shadow(0 6px 10px rgba(39,48,74,.18))}
+  background:url(node.webp) center/100% 100% no-repeat;filter:drop-shadow(0 6px 10px rgba(39,48,74,.18))}
 .nl{left:calc(var(--shift) + var(--colw) / 2);transform:translateX(-50%)}
 .nr{right:calc(var(--shift) + var(--colw) / 2);transform:translateX(50%) scaleX(-1)}
 .hero .balus,.balus-row{display:flex;flex-direction:column;filter:drop-shadow(0 -4px 10px rgba(39,48,74,.12))}
-.rail-top,.rail-bot{background:linear-gradient(rgba(255,255,255,.28),rgba(0,0,0,.08)),url(images/stone.jpg) center/auto 200% repeat-x;flex:none;
+.rail-top,.rail-bot{background:linear-gradient(rgba(255,255,255,.28),rgba(0,0,0,.08)),url(stone.jpg) center/auto 200% repeat-x;flex:none;
   box-shadow:inset 0 -1px 0 rgba(120,100,75,.45),inset 0 1px 0 rgba(255,255,255,.6)}
 .rail-top{height:22px}
 .rail-bot{height:18px}
-.bals{flex:1;background:linear-gradient(90deg,rgba(90,70,50,.28),rgba(255,255,255,.22) 42%,rgba(255,255,255,.1) 58%,rgba(90,70,50,.3)) 0 0/56px 100% repeat-x,url(images/stone.jpg) center/auto 100% repeat-x;
+.bals{flex:1;background:linear-gradient(90deg,rgba(90,70,50,.28),rgba(255,255,255,.22) 42%,rgba(255,255,255,.1) 58%,rgba(90,70,50,.3)) 0 0/56px 100% repeat-x,url(stone.jpg) center/auto 100% repeat-x;
   -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 52 100' preserveAspectRatio='none'%3E%3Cpath d='M14 0H38V8H34C34 12 31 12 31 16C31 22 36 24 36 30C36 36 30 38 30 42C30 52 43 58 43 72C43 82 35 86 33 88H38V92H40V100H12V92H14V88H19C17 86 9 82 9 72C9 58 22 52 22 42C22 38 16 36 16 30C16 24 21 22 21 16C21 12 18 12 18 8H14Z'/%3E%3C/svg%3E") 0 0/56px 100% repeat-x;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 52 100' preserveAspectRatio='none'%3E%3Cpath d='M14 0H38V8H34C34 12 31 12 31 16C31 22 36 24 36 30C36 36 30 38 30 42C30 52 43 58 43 72C43 82 35 86 33 88H38V92H40V100H12V92H14V88H19C17 86 9 82 9 72C9 58 22 52 22 42C22 38 16 36 16 30C16 24 21 22 21 16C21 12 18 12 18 8H14Z'/%3E%3C/svg%3E") 0 0/56px 100% repeat-x}
 .hero .balus{position:absolute;left:0;right:0;bottom:calc(clamp(86px,12vh,116px) / -2);height:clamp(86px,12vh,116px);z-index:6}
 .front-water{position:absolute;left:0;right:0;top:calc(100% + clamp(86px,12vh,116px) / 2 - 8px);height:260px;z-index:5;pointer-events:none;
-  background:url(images/water.jpg) center top/cover;
+  background:url(water.jpg) center top/cover;
   -webkit-mask-image:linear-gradient(to bottom,#000 0,#000 40%,transparent 100%);mask-image:linear-gradient(to bottom,#000 0,#000 40%,transparent 100%)}
 .balus-row{position:relative;height:96px;margin-block:-48px;z-index:7;pointer-events:none}
 @media (max-width:600px){.balus-row{height:72px;margin-block:-36px}}
@@ -263,7 +263,7 @@ body.zh .interlude p .l1{transform:translateX(-30%)}
 body.zh .interlude p .l2{transform:translateX(30%)}
 
 /* interests: stone door-frame cards */
-.card{background:linear-gradient(rgba(250,246,239,.78),rgba(244,238,228,.78)),url(images/stone.jpg) center/cover;border:1px solid #BFB09A;
+.card{background:linear-gradient(rgba(250,246,239,.78),rgba(244,238,228,.78)),url(stone.jpg) center/cover;border:1px solid #BFB09A;
   box-shadow:inset 0 0 0 7px #F6F1E8,inset 0 0 0 8px #C9BBA5,inset 0 0 0 13px #EFE7DA,inset 0 0 0 14px #BBAB93,inset 0 0 0 19px #F3EDE3,inset 0 0 0 20px #D2C5B1,0 18px 40px -26px rgba(60,45,30,.4)}
 .card::before{inset:26px;border:1px solid rgba(160,143,118,.35)}
 .card:hover{box-shadow:inset 0 0 0 7px #F6F1E8,inset 0 0 0 8px #C9BBA5,inset 0 0 0 13px #EFE7DA,inset 0 0 0 14px #BBAB93,inset 0 0 0 19px #F3EDE3,inset 0 0 0 20px #D2C5B1,0 30px 50px -24px rgba(60,45,30,.45)}

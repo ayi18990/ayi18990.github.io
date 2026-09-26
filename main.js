@@ -25,14 +25,14 @@
     // HERO
     html +=
       '<section class="hero" id="top">' +
-        '<div class="hero-bg" aria-hidden="true"><img class="scene" data-speed="0.18" src="images/scene.jpg" alt=""><div class="haze"></div></div>' +
-        '<div class="swan in trio s2" data-speed="0.05"><div class="bob"><img src="images/swan-trio.webp" alt=""></div></div>' +
+        '<div class="hero-bg" aria-hidden="true"><img class="scene" data-speed="0.18" src="scene.jpg" alt=""><div class="haze"></div></div>' +
+        '<div class="swan in trio s2" data-speed="0.05"><div class="bob"><img src="swan-trio.webp" alt=""></div></div>' +
         '<div class="arch-top" aria-hidden="true"></div><div class="arch-ring" aria-hidden="true"></div>' +
         '<div class="pillar pl" aria-hidden="true"><span class="cap"></span></div><div class="pillar pr" aria-hidden="true"><span class="cap"></span></div>' +
         '<div class="balus" aria-hidden="true">' + BALS + '</div><div class="front-water" aria-hidden="true"></div>' +
-        '<div class="swan out spread" data-speed="-0.04"><div class="bob"><img src="images/swan-spread.webp" alt=""></div></div>' +
-        '<div class="swan junc j1 s3"><div class="bob"><img src="images/swan-wings.webp" alt=""></div></div>' +
-        '<div class="swan out glide s4" data-speed="-0.07"><div class="bob"><img src="images/swan-wide.webp" alt=""></div></div>' +
+        '<div class="swan out spread" data-speed="-0.04"><div class="bob"><img src="swan-spread.webp" alt=""></div></div>' +
+        '<div class="swan junc j1 s3"><div class="bob"><img src="swan-wings.webp" alt=""></div></div>' +
+        '<div class="swan out glide s4" data-speed="-0.07"><div class="bob"><img src="swan-wide.webp" alt=""></div></div>' +
         '<div class="hero-text hero-in">' +
           '<p class="label">' + esc(T.hero.eyebrow) + '</p>' +
           '<h1 class="name">' + esc(S.nameEn) + '</h1>' +
@@ -75,10 +75,10 @@
     // INTERLUDE
     html += RAIL +
       '<section class="interlude" aria-label="Interlude">' +
-        '<img class="bg" src="images/interlude.jpg" alt="" aria-hidden="true">' +
-        '<div class="swan sea trio s2"><div class="bob"><img src="images/swan-trio.webp" alt=""></div></div>' +
-        '<div class="swan sea glide s4"><div class="bob"><img src="images/swan-glide.webp" alt=""></div></div>' +
-        '<div class="swan sea littles s3"><div class="bob"><img src="images/swan-little.webp" alt=""></div></div>' +
+        '<img class="bg" src="interlude.jpg" alt="" aria-hidden="true">' +
+        '<div class="swan sea trio s2"><div class="bob"><img src="swan-trio.webp" alt=""></div></div>' +
+        '<div class="swan sea glide s4"><div class="bob"><img src="swan-glide.webp" alt=""></div></div>' +
+        '<div class="swan sea littles s3"><div class="bob"><img src="swan-little.webp" alt=""></div></div>' +
         '<p class="rv"><span class="l1">' + esc(T.interlude[0]) + '</span><span class="l2">' + esc(T.interlude[1]) + '</span></p>' +
       '</section>';
 

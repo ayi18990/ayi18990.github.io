@@ -12,7 +12,7 @@ window.SITE = {
   /* ---------- 基本資料 Basic info ---------- */
   nameEn: 'A-yi Lu',
   nameZh: '呂翼',
-  photo: 'images/portrait-waist.jpg',
+  photo: 'portrait-waist.jpg',
 
   /* ---------- 聯絡方式 Links ---------- */
   email: 'yilu18990321@gmail.com',

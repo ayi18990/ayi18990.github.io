@@ -2,7 +2,7 @@
 
 ## 檔案說明
 - `content.js`：**所有文字都在這裡**，要改內容就改這個檔案
-- `images/`：照片與背景圖（換圖時檔名保持一樣就好）
+- 圖片檔（.jpg / .webp）：照片與背景圖，換圖時檔名保持一樣就好
 - `index.html`、`style.css`、`main.js`：版面與效果，一般不用動
 
 ## 怎麼改文字
@@ -11,7 +11,7 @@
 3. 按綠色的 **Commit changes**，大約 1 分鐘後網站就會更新
 
 ## 怎麼換照片
-到 `images/` 資料夾按 **Add file → Upload files**，上傳同名檔案（例如 `portrait.jpg`）就會覆蓋舊的。
+在檔案列表按 **Add file → Upload files**，上傳同名檔案（例如 `portrait.jpg`）就會覆蓋舊的。
 
 ## 加上 LinkedIn
 在 `content.js` 找到 `linkedin: ''`，把網址貼在引號中間，例如：
