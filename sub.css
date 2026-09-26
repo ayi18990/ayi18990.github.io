@@ -108,3 +108,20 @@ body.zh .quote p{font-family:var(--body);font-style:normal;font-weight:700;font-
 .show-text{max-width:44em}
 .show-pics{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:520px;margin-top:28px}
 .show-pics img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:4px}
+
+/* photography page */
+.ph-hero{padding:140px 0 170px;text-align:center}
+.ph-hero-in{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center}
+.ph-intro{max-width:32em;margin:22px auto 0;color:var(--dusk)}
+.ph-grid{columns:3 260px;column-gap:18px}
+.ph{margin:0 0 18px;break-inside:avoid;position:relative}
+.ph img{width:100%;display:block;border-radius:3px}
+.ph figcaption{display:flex;justify-content:space-between;gap:12px;padding:10px 2px 0;font-size:14px;color:var(--dusk)}
+.ph figcaption b{color:var(--ink);font-weight:500}
+.ph-empty{aspect-ratio:4/3;display:grid;place-items:center;background:linear-gradient(rgba(250,246,239,.8),rgba(244,238,228,.8)),url(stone.jpg) center/cover;border:1px solid #BFB09A;
+  box-shadow:inset 0 0 0 7px #F6F1E8,inset 0 0 0 8px #C9BBA5,inset 0 0 0 13px #EFE7DA,inset 0 0 0 14px #BBAB93}
+.ph-empty.tall{aspect-ratio:3/4}
+.ph-empty span{font-family:var(--title);font-style:italic;font-size:20px;color:#A1978A;letter-spacing:.06em}
+body.zh .ph-empty span{font-family:var(--body);font-style:normal;font-size:15px;letter-spacing:.3em}
+.ph-cta{display:flex;flex-direction:column;align-items:center;gap:12px;margin-top:40px}
+.ph-cta span{font-size:13px;letter-spacing:.14em;color:#A1978A}

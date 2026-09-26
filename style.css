@@ -334,3 +334,6 @@ section.s{padding-block:150px}
 @media (max-width:760px){.hero .swan.glide{width:42vw}}
 
 .about-photo{height:66%;top:17%}
+
+.card-more{display:inline-block;margin-top:14px;font-size:14px;letter-spacing:.12em;color:var(--wine);text-decoration:none;border-bottom:1px solid rgba(122,31,43,.35)}
+.card-more:hover{border-bottom-color:var(--wine)}

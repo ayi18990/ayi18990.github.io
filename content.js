@@ -20,6 +20,8 @@ window.SITE = {
   instagramHandle: '@ayi8990',
   linkedin: 'https://www.linkedin.com/in/ayi18990',   // LinkedIn 網址；空著就不會顯示
   linkedinHandle: 'ayi18990',
+  vsco: 'https://vsco.co/ayi18990/gallery',   // 攝影作品集
+  vscoHandle: 'vsco.co/ayi18990',
 
   /* ================= 繁體中文 ================= */
   zh: {
@@ -70,7 +72,7 @@ window.SITE = {
       sub: '課本以外的我',
       items: [
         { title: '吉他', en: 'Guitar', desc: '' },
-        { title: '攝影', en: 'Photography', desc: '用鏡頭記錄旅行和日常。' },
+        { title: '攝影', en: 'Photography', desc: '用鏡頭記錄旅行和日常。', page: 'photos.html' },
         { title: '游泳', en: 'Swimming', desc: '高中游泳隊出身，到現在仍然很喜歡待在水裡。' }
       ]
     },
@@ -134,7 +136,7 @@ window.SITE = {
       sub: '',
       items: [
         { title: 'Guitar', en: '吉他', desc: '' },
-        { title: 'Photography', en: '攝影', desc: 'I capture travel and everyday moments.' },
+        { title: 'Photography', en: '攝影', desc: 'I capture travel and everyday moments.', page: 'photos.html' },
         { title: 'Swimming', en: '游泳', desc: 'A former high-school swim team member who still loves being in the water.' }
       ]
     },

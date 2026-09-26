@@ -88,7 +88,8 @@
       '<section class="s" id="interests">' + NODES +
         '<div class="wrap">' + heading(I, lang) +
           '<div class="cards">' + I.items.map(function (c) {
-            return '<article class="card rv"><h3 class="big">' + esc(c.title) + '</h3><p class="alt">' + esc(c.en) + '</p>' + (c.desc ? '<p>' + esc(c.desc) + '</p>' : '') + '</article>';
+            return '<article class="card rv"><h3 class="big">' + esc(c.title) + '</h3><p class="alt">' + esc(c.en) + '</p>' + (c.desc ? '<p>' + esc(c.desc) + '</p>' : '') +
+              (c.page ? '<a class="more card-more" href="' + esc(c.page) + '">' + (lang === 'zh' ? '看作品' : 'View work') + ' →</a>' : '') + '</article>';
           }).join('') + '</div>' +
         '</div>' +
       '</section>';
@@ -99,6 +100,9 @@
       '<div class="row"><span class="k">Email</span><a class="v" id="email" href="mailto:' + esc(S.email) + '">' + esc(S.email) + '</a>' +
         '<button type="button" class="copy" id="copy-email">' + esc(C.copy) + '</button></div>' +
       '<a class="row" href="' + esc(S.instagram) + '" target="_blank" rel="noopener"><span class="k">Instagram</span><span class="v">' + esc(S.instagramHandle) + '</span><span class="go" aria-hidden="true">↗</span></a>';
+    if (S.vsco) {
+      rows += '<a class="row" href="' + esc(S.vsco) + '" target="_blank" rel="noopener"><span class="k">VSCO</span><span class="v">' + esc(S.vscoHandle) + '</span><span class="go" aria-hidden="true">↗</span></a>';
+    }
     if (S.linkedin) {
       rows += '<a class="row" href="' + esc(S.linkedin) + '" target="_blank" rel="noopener"><span class="k">LinkedIn</span><span class="v">' + esc(S.linkedinHandle || 'LinkedIn') + '</span><span class="go" aria-hidden="true">↗</span></a>';
     }
