@@ -53,8 +53,9 @@ window.SITE = {
       // 每一筆可以加 page: 'pages/scouting.html' 這樣的網址，就會出現「了解更多」連結
       items: [
         { when: '2016\n9 歲起', title: '參與童軍活動', desc: '多次參加臺灣各地的露營活動，從野外生活中學會團隊合作與照顧彼此。' },
-        { when: '2023', title: '第 25 屆世界童軍大露營', desc: '以參加人員身分出席，和來自世界各地的童軍一起生活與交流。' },
+        { when: '2023', title: '第 25 屆世界童軍大露營 · 韓國', desc: '以參加人員身分出席，和來自世界各地的童軍一起生活與交流。' },
         { when: '2023–2026\n高中', title: '就讀新竹女中', desc: '國立新竹女子高級中學。' },
+        { when: '2024', title: '英國遊學團', desc: '前往英國參加遊學團，詳細內容整理中。' },
         { when: '2025\n高二', title: '游泳校隊副隊長', desc: '帶領近 30 人的泳隊，主導水運會開場表演、入隊測驗與招生影片。', page: 'swim.html' },
         { when: '2025\n高二', title: '班長 · 交通服務隊隊長', desc: '與游泳校隊副隊長同時擔任，學會統籌事務，也為一群人負責。' },
         { when: '2026', title: '臺北醫學大學 生物醫學工程學系', desc: '進入大學，開始探索生醫工程的各種可能。' },
@@ -116,8 +117,9 @@ window.SITE = {
       sub: '',
       items: [
         { when: '2016\nAge 9', title: 'Joined Scouting', desc: 'Took part in many camps across Taiwan, learning teamwork and how to look out for each other outdoors.' },
-        { when: '2023', title: '25th World Scout Jamboree', desc: 'Attended as a participant, living and exchanging ideas with scouts from around the world.' },
+        { when: '2023', title: '25th World Scout Jamboree · Korea', desc: 'Attended as a participant, living and exchanging ideas with scouts from around the world.' },
         { when: '2023–2026\nHigh School', title: "Hsinchu Girls' Senior High School", desc: "National Hsinchu Girls' Senior High School." },
+        { when: '2024', title: 'Study Tour in the UK', desc: 'Joined a study tour in the United Kingdom. More details coming soon.' },
         { when: '2025\nGrade 11', title: 'Swim Team Vice-Captain', desc: 'Led a team of almost 30 swimmers, including the swim-meet opening show, tryouts and a recruitment video.', page: 'swim.html' },
         { when: '2025\nGrade 11', title: 'Class President · Traffic Service Team Captain', desc: 'Held alongside the swim team role, learning to coordinate people and take responsibility for a group.' },
         { when: '2026', title: 'Taipei Medical University, Biomedical Engineering', desc: 'Started university and began exploring what biomedical engineering can do.' },
