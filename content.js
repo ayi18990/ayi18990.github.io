@@ -55,7 +55,8 @@ window.SITE = {
         { when: '2016\n9 歲起', title: '參與童軍活動', desc: '多次參加臺灣各地的露營活動，從野外生活中學會團隊合作與照顧彼此。' },
         { when: '2023', title: '第 25 屆世界童軍大露營', desc: '以參加人員身分出席，和來自世界各地的童軍一起生活與交流。' },
         { when: '2023–2026\n高中', title: '就讀新竹女中', desc: '國立新竹女子高級中學。' },
-        { when: '2025\n高二', title: '班長 · 游泳隊副隊長 · 交通服務隊隊長', desc: '同時擔任三個幹部職位，學會統籌事務、帶領團隊，也為一群人負責。' },
+        { when: '2025\n高二', title: '游泳校隊副隊長', desc: '帶領近 30 人的泳隊，主導水運會開場表演、入隊測驗與招生影片。', page: 'swim.html' },
+        { when: '2025\n高二', title: '班長 · 交通服務隊隊長', desc: '與游泳校隊副隊長同時擔任，學會統籌事務，也為一群人負責。' },
         { when: '2026', title: '臺北醫學大學 生物醫學工程學系', desc: '進入大學，開始探索生醫工程的各種可能。' },
         { when: '2027', title: '第 26 屆世界童軍大露營 · 波蘭', desc: '將擔任 IST（國際服務團隊）成員，從參加者轉換為服務者。', badge: '即將參加' }
       ]
@@ -117,7 +118,8 @@ window.SITE = {
         { when: '2016\nAge 9', title: 'Joined Scouting', desc: 'Took part in many camps across Taiwan, learning teamwork and how to look out for each other outdoors.' },
         { when: '2023', title: '25th World Scout Jamboree', desc: 'Attended as a participant, living and exchanging ideas with scouts from around the world.' },
         { when: '2023–2026\nHigh School', title: "Hsinchu Girls' Senior High School", desc: "National Hsinchu Girls' Senior High School." },
-        { when: '2025\nGrade 11', title: 'Class President · Swim Team Vice-Captain · Traffic Service Team Captain', desc: 'Held three leadership roles at once, learning to coordinate people, lead a team and take responsibility for a group.' },
+        { when: '2025\nGrade 11', title: 'Swim Team Vice-Captain', desc: 'Led a team of almost 30 swimmers, including the swim-meet opening show, tryouts and a recruitment video.', page: 'swim.html' },
+        { when: '2025\nGrade 11', title: 'Class President · Traffic Service Team Captain', desc: 'Held alongside the swim team role, learning to coordinate people and take responsibility for a group.' },
         { when: '2026', title: 'Taipei Medical University, Biomedical Engineering', desc: 'Started university and began exploring what biomedical engineering can do.' },
         { when: '2027', title: '26th World Scout Jamboree · Poland', desc: 'Will serve on the International Service Team (IST), moving from participant to volunteer.', badge: 'Upcoming' }
       ]
