@@ -485,3 +485,10 @@ body.zh .card .alt{font-family:var(--body);font-style:italic;font-size:19px;lett
 .arch-lines .ln{stroke-width:1.4}
 .arch-lines .ln.thin{stroke-width:.8;stroke:var(--line-soft)}
 .about-intro p:last-child{color:var(--ink)}
+/* 手機：About 標題放在照片上方，不壓在人身上 */
+@media (max-width:600px){
+  .about-visual{display:flex;flex-direction:column-reverse;align-items:stretch;padding-top:0}
+  .about-title{position:relative;left:auto;bottom:auto;margin-bottom:8px}
+  .about-title h2.fancy{font-size:64px}
+  .about-photo{width:78%;margin:0 auto}
+}
