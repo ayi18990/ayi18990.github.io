@@ -13,11 +13,31 @@
   var NODES = '';
   var BALS = '<div class="rail-top"></div><div class="bals"></div><div class="rail-bot"></div>';
   var RAIL = '';
+  // 名字／標題的花體：每個字第一個字母用草寫，其餘用細長大寫
+  function fancy(t) { return esc(t); }
   function heading(h, lang, left) {
-    return '<div class="heading' + (left ? ' left' : ' rv') + '"><div class="t"><h2>' + esc(h.heading) + '</h2>' +
+    return '<div class="heading' + (left ? ' left' : ' rv') + '"><div class="t"><h2 class="fancy" aria-label="' + esc(h.heading) + '">' + fancy(h.heading) + '</h2>' +
       '</div></div>';
   }
+  // 線稿：拱門、柱頭、欄杆
+  var NS = ' vector-effect="non-scaling-stroke"';
+  var ARCH = '<svg class="arch-lines" viewBox="0 0 1000 300" preserveAspectRatio="none" aria-hidden="true">' +
+    '<path class="ln" d="M0 300C0 130 340 70 500 8C660 70 1000 130 1000 300"' + NS + '/>' +
+    '<path class="ln" d="M38 300C38 150 350 106 500 52C650 106 962 150 962 300"' + NS + '/>' +
+    '<path class="ln cons" d="M76 300C76 172 360 140 500 96C640 140 924 172 924 300"' + NS + '/>' +
+    '<line class="ln axis" x1="500" y1="0" x2="500" y2="300"' + NS + '/>' +
+    '<path class="ln thin" d="M19 300C19 140 345 88 500 30C655 88 981 140 981 300"' + NS + '/>' +
 
+    '<line class="ln thin" x1="440" y1="8" x2="560" y2="8"' + NS + '/><line class="ln thin" x1="455" y1="52" x2="545" y2="52"' + NS + '/>' +
+    '<path class="ln thin" d="M500 8L480 -2M500 8L520 -2"' + NS + '/>' +
+    '</svg>';
+  var CAP = '<svg class="cap-lines" viewBox="0 0 160 70" aria-hidden="true">' +
+    '<rect class="ln" x="4" y="2" width="152" height="14"' + NS + '/>' +
+    '<path class="ln" d="M14 16C14 36 40 40 80 40C120 40 146 36 146 16"' + NS + '/>' +
+    '<line class="ln" x1="30" y1="46" x2="130" y2="46"' + NS + '/>' +
+    '<line class="ln" x1="30" y1="52" x2="130" y2="52"' + NS + '/>' +
+    '<line class="ln cons" x1="80" y1="0" x2="80" y2="70"' + NS + '/>' +
+    '</svg>';
   function render(lang) {
     var T = S[lang];
     var html = '';
@@ -27,19 +47,21 @@
       '<section class="hero" id="top">' +
         '<div class="hero-bg" aria-hidden="true"><img class="scene" data-speed="0.18" src="scene.jpg" alt=""><div class="haze"></div></div>' +
         '<div class="swan in trio s2" data-speed="0.05"><div class="bob"><img src="swan-trio.webp" alt=""></div></div>' +
-        '<div class="arch-top" aria-hidden="true"></div><div class="arch-ring" aria-hidden="true"></div>' +
-        '<div class="pillar pl" aria-hidden="true"><span class="cap"></span></div><div class="pillar pr" aria-hidden="true"><span class="cap"></span></div>' +
-        '<div class="balus" aria-hidden="true">' + BALS + '</div><div class="front-water" aria-hidden="true"></div>' +
+        '<div class="arch-top" aria-hidden="true"></div><div class="arch-draw" aria-hidden="true">' + ARCH + '<span class="tag t1">A-01</span><span class="tag t2">R 0.62</span></div>' +
+        '<div class="pillar pl" aria-hidden="true"><span class="cap">' + CAP + '</span></div><div class="pillar pr" aria-hidden="true"><span class="cap">' + CAP + '</span></div>' +
+        '<div class="balus" aria-hidden="true"><div class="rail-top"></div><div class="bals"></div><div class="rail-bot"></div></div><div class="front-water" aria-hidden="true"></div>' +
+        (T.hero.coords ? '<p class="coords" aria-hidden="true">' + esc(T.hero.coords) + '</p>' : '') +
         '<div class="swan out spread" data-speed="-0.04"><div class="bob"><img src="swan-spread.webp" alt=""></div></div>' +
         '<div class="swan junc j1 s3"><div class="bob"><img src="swan-wings.webp" alt=""></div></div>' +
         '<div class="swan out glide s4" data-speed="-0.07"><div class="bob"><img src="swan-wide.webp" alt=""></div></div>' +
         '<div class="hero-text hero-in">' +
           '<p class="label">' + esc(T.hero.eyebrow) + '</p>' +
-          '<h1 class="name">' + esc(S.nameEn) + '</h1>' +
+          '<h1 class="name" aria-label="' + esc(S.nameEn) + '">' + fancy(S.nameEn) + '</h1>' +
           '<p class="name-zh">' + esc(S.nameZh) + '</p>' +
           '<div class="rule"></div>' +
           '<p class="tagline">' + esc(T.hero.tagline) + '</p>' +
-          '<p class="sub">' + esc(T.hero.sub) + '</p>' +
+          (T.hero.sub ? '<p class="sub">' + esc(T.hero.sub) + '</p>' : '') +
+          (T.hero.status ? '<p class="status"><i></i>' + esc(T.hero.status) + '</p>' : '') +
           '<a class="enter" href="#about">' + esc(T.hero.button) + '</a>' +
         '</div>' +
       '</section>';
@@ -50,7 +72,7 @@
       '<section class="s about-s" id="about">' + NODES +
         '<div class="about-visual">' +
           '<img class="about-photo" src="' + esc(S.photo) + '" alt="' + esc(S.nameZh + ' ' + S.nameEn) + '">' +
-          '<div class="wrap about-title rv"><h2>' + esc(A.heading) + '</h2></div>' +
+          '<div class="wrap about-title rv"><h2 class="fancy" aria-label="' + esc(A.heading) + '">' + fancy(A.heading) + '</h2></div>' +
         '</div>' +
         '<div class="wrap about-body rv">' +
           '<div class="about-intro"><h3>' + esc(A.title) + '</h3>' +
@@ -59,6 +81,22 @@
         '</div>' +
       '</section>';
 
+    // STATS + FOCUS
+    if (T.stats && T.stats.length) {
+      html += '<section class="stats-s"><div class="wrap"><dl class="stats rv">' + T.stats.map(function (x) {
+        return '<div><dt>' + esc(x[0]) + '</dt><dd>' + esc(x[1]) + '</dd></div>';
+      }).join('') + '</dl></div></section>';
+    }
+    var F = T.focus;
+    if (F) {
+      html += '<section class="s" id="focus"><div class="wrap">' + heading(F, lang) +
+        '<div class="spec-grid">' + F.items.map(function (x) {
+          return '<article class="spec rv"><p class="spec-no">' + esc(x.no) + ' — ' + esc(x.en) + '</p><h3>' + esc(x.title) + '</h3><p>' + esc(x.desc) + '</p></article>';
+        }).join('') + '</div>' +
+        (F.looking ? '<p class="looking rv">' + esc(F.looking) + '</p>' : '') +
+      '</div></section>';
+    }
+
     // EXPERIENCE
     var E = T.experience;
     html +=
@@ -66,20 +104,10 @@
         '<div class="wrap">' + heading(E, lang) +
           '<ol class="tl">' + E.items.map(function (it) {
             return '<li class="rv' + (it.badge ? ' soon' : '') + '"><span class="when">' + esc(it.when) + '</span><div><h4>' + esc(it.title) +
-              (it.badge ? '<span class="badge">' + esc(it.badge) + '</span>' : '') + '</h4><p>' + esc(it.desc) + '</p>' +
+              (it.badge ? '<span class="badge">' + esc(it.badge) + '</span>' : '') + '</h4>' + (it.desc ? '<p>' + esc(it.desc) + '</p>' : '') +
               (it.page ? '<a class="more" href="' + esc(it.page) + '">' + (lang === 'zh' ? '了解更多' : 'Read more') + ' →</a>' : '') + '</div></li>';
           }).join('') + '</ol>' +
         '</div>' +
-      '</section>';
-
-    // INTERLUDE
-    html += RAIL +
-      '<section class="interlude" aria-label="Interlude">' +
-        '<img class="bg" src="interlude.jpg" alt="" aria-hidden="true">' +
-        '<div class="swan sea trio s2"><div class="bob"><img src="swan-trio.webp" alt=""></div></div>' +
-        '<div class="swan sea glide s4"><div class="bob"><img src="swan-glide.webp" alt=""></div></div>' +
-        '<div class="swan sea littles s3"><div class="bob"><img src="swan-little.webp" alt=""></div></div>' +
-        '<p class="rv"><span class="l1">' + esc(T.interlude[0]) + '</span><span class="l2">' + esc(T.interlude[1]) + '</span></p>' +
       '</section>';
 
     // INTERESTS
@@ -116,7 +144,8 @@
     main.innerHTML = html;
 
     // nav + footer text
-    ['about', 'experience', 'interests', 'contact'].forEach(function (k) {
+    ['about', 'focus', 'experience', 'interests', 'contact'].forEach(function (k) {
+      if (!document.getElementById('nav-' + k)) return;
       document.getElementById('nav-' + k).textContent = T.nav[k];
     });
     document.getElementById('foot-note').textContent = T.footer;
@@ -192,10 +221,18 @@
     });
   }
   window.addEventListener('scroll', function () {
-    document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 40);
+    navFade();
     if (!ticking) { ticking = true; requestAnimationFrame(update); }
   }, { passive: true });
   window.addEventListener('resize', update);
+  // 導覽列：頂端是深色，往下滑慢慢變成淡色毛玻璃
+  function navFade() {
+    var nav = document.getElementById('nav'), t = Math.min(1, Math.max(0, window.scrollY / 420));
+    nav.style.setProperty('--t', t.toFixed(3));
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+    nav.classList.toggle('lightnav', t > .5);
+  }
+  navFade();
 
   // Language
   function setLang(lang, animate) {

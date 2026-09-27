@@ -83,9 +83,9 @@
       if (gone) return; gone = true; stop();
       f.wrap.classList.add('out');
       document.documentElement.classList.remove('flying');
-      setTimeout(function () { f.wrap.remove(); }, 400);
+      setTimeout(function () { f.wrap.remove(); }, 260);
     }
-    var stop = fly(f, 1000, function () { setTimeout(end, 120); });
+    var stop = fly(f, 650, function () { setTimeout(end, 60); });
     f.wrap.addEventListener('click', end);
     document.addEventListener('keydown', end, { once: true });
   }
@@ -96,7 +96,7 @@
     var f = build(BACK), went = false;
     f.wrap.classList.add('in');
     function go() { if (went) return; went = true; location.href = href; }
-    setTimeout(function () { fly(f, 900, function () { setTimeout(go, 80); }); }, 180);
+    setTimeout(function () { fly(f, 600, function () { setTimeout(go, 40); }); }, 60);
     f.wrap.addEventListener('click', go);
   }
 

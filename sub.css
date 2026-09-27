@@ -210,3 +210,13 @@ html[lang="zh-Hant"] .fly-city{font-family:var(--body);font-style:normal;font-si
 @media (max-width:600px){.fly svg{width:100vw}}
 .fly{overflow:hidden}@media (max-width:600px){.fly svg{width:116vw;max-width:none;flex:none}}
 @media (max-width:600px){.fly svg{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)}}
+
+/* C2：子頁面標題跟首頁一致（粗無襯線），中文維持宋體 */
+.sub-hero h1,.sec-head h2,.dlg-body h2,.feature>h3{font-family:var(--heavy);font-style:normal;font-weight:800;letter-spacing:-.035em}
+body.zh .sub-hero h1,body.zh .sec-head h2,body.zh .dlg-body h2,body.zh .feature>h3{font-family:var(--body);font-weight:700;letter-spacing:.08em}
+.sub-hero h1{line-height:1}
+/* C3：飛機畫面半透明，看得到後面的頁面；更快 */
+.fly{background:radial-gradient(ellipse at 50% 50%,rgba(250,249,246,.55) 0%,rgba(245,243,239,.28) 60%,rgba(245,243,239,.12) 100%)!important;transition:opacity .25s ease!important}
+.fly-map{opacity:.6}
+.fly svg{filter:drop-shadow(0 0 2px rgba(255,255,255,.95)) drop-shadow(0 0 8px rgba(255,255,255,.6))}
+.fly.in{animation-duration:.12s}
