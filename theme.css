@@ -1,0 +1,170 @@
+/* ==========================================================
+   內頁新風格（跟首頁一致）：黑 × Columbia blue × 酒紅 × 緞金
+   疊在 style.css / sub.css 之後，只改外觀，不動內容
+   ========================================================== */
+:root{
+  --black:#050506; --blue:#C6D6E5; --blue-deep:#5E7A97; --ink:#0B0B0D; --ink-2:#2B2F36; --cream:#F2EFE9;
+  --wine:#7A1F2B; --pink:#7A1F2B; --gold:#CC9E4C; --gold-2:#E3BE78; --cadet:#8B9EA5;
+  --fog:#C6D6E5; --mist:#B9CBDC; --dusk:#2B2F36; --stone:rgba(11,11,13,.3);
+  --sans:"Poppins","Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
+  --body:var(--sans); --title:var(--sans); --heavy:var(--sans); --mono:var(--sans);
+  --grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .878 0 0 0 0 .816 0 0 0 0 .714 0 0 0 1.4 -.55'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  --dots:radial-gradient(circle,rgba(66,66,58,.3) 1.3px,transparent 1.6px);
+  --gdots:radial-gradient(circle,var(--gold) 1.4px,transparent 1.7px);
+}
+html,body{background:var(--blue)}
+body{font-family:var(--sans);color:var(--ink);font-weight:400}
+body.zh{font-family:var(--sans)}
+::selection{background:var(--wine);color:#fff}
+
+/* nav：黑底 */
+.nav,.nav.scrolled{background:rgba(66,66,58,.78)!important;-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);box-shadow:none;border-bottom:1px solid rgba(224,208,182,.1)}
+.nav::before{display:none}
+.nav .back,.nav .links a{color:rgba(224,208,182,.8)!important;font-family:var(--sans);font-weight:500;letter-spacing:.06em}
+.nav .back:hover{color:#fff!important}
+.lang{border:0;background:none;-webkit-backdrop-filter:none;backdrop-filter:none;gap:4px}
+.lang button{font-family:var(--sans);font-weight:600;font-size:12.5px;color:rgba(224,208,182,.45);background:none!important;padding:5px 10px}
+.lang button[aria-pressed="true"]{color:var(--blue);background:none!important}
+
+/* 開場：黑底＋網點天鵝翅膀＋顆粒，往下漸變成 Columbia blue */
+.sub-hero,.ph-hero{background:linear-gradient(var(--black) 0,var(--black) calc(100% - 300px),#1E242B calc(100% - 220px),#56697C calc(100% - 140px),#9CB0C3 calc(100% - 70px),var(--blue) 100%);color:var(--blue);padding-bottom:260px}
+.sub-hero::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:var(--grain);opacity:.3;mix-blend-mode:screen;
+  -webkit-mask-image:linear-gradient(#000 60%,transparent 90%);mask-image:linear-gradient(#000 60%,transparent 90%)}
+.sub-hero .sky{display:none}
+.sub-hero::after{content:"";position:absolute;left:50%;top:40px;width:min(150vw,2100px);aspect-ratio:2320/1094;transform:translateX(-46%);z-index:0;pointer-events:none;
+  background:url(swan-halftone.webp) center/contain no-repeat;opacity:.38;
+  -webkit-mask-image:linear-gradient(#000 35%,transparent 75%);mask-image:linear-gradient(#000 35%,transparent 75%)}
+.sub-water,.sub-swan{display:none!important}
+.sub-hero .label{font-family:var(--sans);font-weight:600;letter-spacing:.2em;color:rgba(224,208,182,.75);background:none;padding:0;text-shadow:0 1px 12px rgba(66,66,58,.9)}
+.sub-hero h1,body.zh .sub-hero h1{font-family:var(--sans)!important;font-style:normal;font-weight:700;letter-spacing:-.04em;color:var(--cream);text-shadow:0 2px 30px rgba(66,66,58,.6);font-size:clamp(52px,7vw,104px);line-height:1}
+body.zh .sub-hero h1{letter-spacing:.02em;line-height:1.2;font-size:clamp(40px,5.2vw,72px)}
+.sub-hero .alt,body.zh .sub-hero .alt{font-family:var(--sans);font-style:normal;font-weight:500;font-size:18px;color:var(--gold-2)}
+.sub-hero .uk-intro,.ph-intro{color:rgba(224,208,182,.85);text-shadow:0 1px 12px rgba(66,66,58,.9)}
+.meta{border-top-color:rgba(224,208,182,.25)}
+.meta dt{font-family:var(--sans);font-weight:600;color:rgba(224,208,182,.55)}
+.meta dd{color:var(--cream);font-weight:500}
+.framed{filter:drop-shadow(0 30px 40px rgba(0,0,0,.55))}
+
+/* 標題 */
+.sec-head{border-bottom:1.5px solid var(--ink)}
+.sec-head .no{font-family:var(--sans);font-style:normal;font-weight:700;font-size:15px;color:var(--wine)}
+.sec-head h2,body.zh .sec-head h2{font-family:var(--sans)!important;font-style:normal;font-weight:700;letter-spacing:-.035em;font-size:clamp(40px,5vw,68px);color:var(--ink)}
+body.zh .sec-head h2{letter-spacing:.04em;font-size:clamp(30px,3.6vw,44px)}
+body.subpage h3,body.subpage h4{font-family:var(--sans);font-weight:700}
+.lead{font-weight:500}
+.two p,.ways p,.show-text p,.reflect,.card p,.dlg-text p{color:var(--ink-2)}
+body.subpage section.s{position:relative}
+body.subpage section.s::before{content:"";position:absolute;right:0;top:0;width:60%;height:70%;pointer-events:none;background:var(--dots) 0 0/9px 9px;
+  -webkit-mask-image:radial-gradient(ellipse 60% 55% at 100% 0%,#000 0%,transparent 70%);mask-image:radial-gradient(ellipse 60% 55% at 100% 0%,#000 0%,transparent 70%);z-index:0}
+body.subpage section.s>*{position:relative;z-index:1}
+
+/* 資料列、表格 */
+.facts.team{border-top:1.5px solid var(--ink)}
+.facts dt,.facts.team dt{font-family:var(--sans);font-weight:600;color:var(--wine)!important}
+.facts dd{font-weight:500}
+body.subpage th{font-family:var(--sans);font-weight:600;color:var(--wine);border-bottom:1.5px solid var(--ink)}
+body.subpage td{border-bottom:1px solid rgba(11,11,13,.18)}
+.res td:nth-child(3){color:var(--wine);font-weight:600}
+
+/* 卡片：跟首頁「興趣」一樣的深色玻璃卡 */
+.cards .card,.card.left{background:linear-gradient(180deg,rgba(40,48,62,.92),rgba(12,14,18,.96))!important;border:1px solid rgba(224,208,182,.16)!important;border-radius:18px;
+  box-shadow:0 30px 60px -32px rgba(66,66,58,.7),inset 0 1px 0 rgba(255,255,255,.06)!important;color:var(--cream);text-align:left}
+.cards .card::before{display:none}
+.cards .card .big,body.zh.subpage .card .big{font-family:var(--sans);font-style:normal;font-weight:700;color:#fff;letter-spacing:-.01em;margin-left:0}
+body.zh.subpage .card .big{letter-spacing:.06em}
+.cards .card p{color:rgba(224,208,182,.82)!important}
+.ways li{border-left:2px solid var(--wine)}
+
+/* 水運會表演區塊、冠軍 */
+.feature{background:rgba(255,255,255,.35);border:1px solid rgba(11,11,13,.14);border-radius:18px}
+.feature>h3,body.zh .feature>h3{font-family:var(--sans)!important;font-style:normal;font-weight:700;letter-spacing:-.02em}
+.feature .alt{color:var(--wine);font-weight:600}
+.cap{font-family:var(--sans);color:var(--blue-deep)}
+.champ li{background:rgba(255,255,255,.35);border:1px solid rgba(11,11,13,.14);border-radius:12px;position:relative;overflow:hidden}
+.champ li b,body.zh .champ li b{font-family:var(--sans);font-style:normal;font-weight:700;color:#8A6424}
+.champ li::after{content:"";position:absolute;right:-10px;top:-10px;width:70px;height:70px;background:var(--gdots) 0 0/6px 6px;
+  -webkit-mask:radial-gradient(circle,#000 20%,transparent 70%);mask:radial-gradient(circle,#000 20%,transparent 70%);opacity:.8}
+
+/* 引言、按鈕 */
+.quote p,body.zh .quote p{font-family:var(--sans)!important;font-style:normal;font-weight:700;letter-spacing:-.01em;color:var(--ink)}
+body.zh .quote p{letter-spacing:.06em}
+.quote::before{background:var(--gold);height:2px}
+.enter,.back-bottom .back{font-family:var(--sans);font-weight:600;letter-spacing:.08em;border:1.5px solid var(--ink);background:none;color:var(--ink);border-radius:0}
+.enter:hover{background:var(--ink);color:var(--blue)}
+
+/* 英國日記：月曆 */
+.cal .wd{font-family:var(--sans);font-weight:600;color:var(--blue-deep)}
+.day{border-radius:10px;box-shadow:0 14px 26px -18px rgba(66,66,58,.6)}
+.day-cap b{font-family:var(--sans);font-style:normal;font-weight:700}
+.day.text{background:linear-gradient(180deg,rgba(40,48,62,.94),rgba(12,14,18,.97));box-shadow:0 14px 26px -18px rgba(66,66,58,.6),inset 0 0 0 1px rgba(224,208,182,.16)}
+.day.text .day-cap{color:var(--cream)}
+.day.text .day-cap b{color:var(--gold-2)}
+.td-mark,body.zh .td-mark{font-family:var(--sans);font-style:normal;font-weight:600;color:rgba(224,208,182,.55)}
+.dlg-bg{background:rgba(66,66,58,.55)}
+.dlg-panel{background:var(--blue);border:0;border-radius:18px}
+.dlg-body .label{color:var(--wine);font-family:var(--sans);font-weight:600}
+.dlg-body h2,body.zh .dlg-body h2{font-family:var(--sans)!important;font-style:normal;font-weight:700;color:var(--ink)}
+.dlg-x{background:rgba(224,208,182,.9)}
+.dlg-nav{border-top-color:rgba(11,11,13,.2)}
+.dlg-nav button{font-family:var(--sans);font-weight:500;color:var(--ink-2)}
+.dlg-nav button:hover{color:var(--wine)}
+.looks .card,.cards.three .card{min-height:0}
+
+/* 攝影頁 */
+.ph-hero{text-align:left}
+.ph-empty{background:linear-gradient(180deg,rgba(40,48,62,.92),rgba(12,14,18,.96));border:1px solid rgba(224,208,182,.16);border-radius:14px;box-shadow:none}
+.ph-empty span,body.zh .ph-empty span{font-family:var(--sans);font-style:normal;font-weight:600;color:rgba(224,208,182,.5)}
+.ph-cta span{color:var(--blue-deep)}
+
+/* 飛機動畫配色 */
+.fly{background:rgba(224,208,182,.35)!important}
+.fly-trail{stroke:var(--wine)}
+.fly-city{font-family:var(--sans)!important;font-style:normal!important;font-weight:600;fill:var(--ink)}
+
+/* 頁尾 */
+footer{background:var(--black);color:rgba(224,208,182,.5);border-top:1px solid rgba(224,208,182,.12)}
+footer .sig{font-family:var(--sans);font-style:normal;font-weight:700;color:var(--blue);font-size:20px}
+footer small{font-family:var(--sans)}
+
+/* 羽毛 */
+.feather-layer{position:absolute;left:0;top:0;width:100%;z-index:45;pointer-events:none;overflow:hidden}
+.feather{position:absolute;display:block;padding:0;margin:0;border:0;background:none;cursor:pointer;pointer-events:auto;-webkit-tap-highlight-color:transparent;will-change:transform}
+.feather img{width:100%;height:auto;display:block;pointer-events:none;filter:drop-shadow(0 0 10px rgba(224,208,182,.18))}
+.feather.rest{pointer-events:none}
+body.subpage footer{position:relative;z-index:46}
+.back-bottom .back{border:0;border-bottom:2px solid var(--wine);padding:0 0 3px}
+
+/* ===== 全站 olive × dun ===== */
+.sub-hero,.ph-hero{background:var(--olive) top/100% 100% no-repeat;position:relative;padding-bottom:420px}
+.sub-hero>.fade,.ph-hero>.fade{display:none}
+.sub-hero .sub-hero-grid,.ph-hero .ph-hero-in{position:relative;z-index:3}
+body.subpage main>section:first-child{background:linear-gradient(180deg,var(--olive) 0,var(--olive) calc(100% - 400px),#45453C calc(100% - 370px),#4C4B41 calc(100% - 340px),#57554A calc(100% - 305px),#656155 calc(100% - 270px),#767061 calc(100% - 235px),#888170 calc(100% - 200px),#9B9280 calc(100% - 165px),#ADA28F calc(100% - 130px),#BEB29D calc(100% - 95px),#CDBFA8 calc(100% - 60px),#D7C8AF calc(100% - 30px),var(--dun) 100%)}
+.sub-hero::after{z-index:1}
+.nav,.nav.scrolled{background:rgba(66,66,58,.88)!important}
+.sub-hero h1,body.zh .sub-hero h1{color:#fff}
+.sub-hero .alt,body.zh .sub-hero .alt{color:var(--gold-2)}
+footer{background:var(--olive)}
+footer .sig{color:var(--dun)}
+/* 卡片換成 frame3 白色相框 */
+.cards .card,.card.left{background:linear-gradient(140deg,#FFFFFF 0%,#F4F1EA 45%,#E7E2D8 100%)!important;border:0!important;border-radius:2px;color:var(--ink);padding:40px 34px!important;
+  box-shadow:0 30px 44px -26px rgba(20,20,16,.5),0 6px 12px -6px rgba(20,20,16,.2),inset 0 0 0 1px rgba(255,255,255,.9),inset 2px 2px 0 1px #fff,inset -3px -3px 0 1px #D8D1C4,inset 0 0 0 9px #F2EEE6,inset 0 0 0 10px #D4CCBD!important}
+.cards .card::after,.card.left::after{content:"";position:absolute;inset:15px;pointer-events:none;border:4px solid transparent;
+  background:radial-gradient(circle,#C9BFAE 1.3px,transparent 1.8px) 0 0/6px 6px;
+  -webkit-mask:linear-gradient(#000 0 0) padding-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) padding-box exclude,linear-gradient(#000 0 0)}
+.cards .card{position:relative}
+.cards .card .big,body.zh.subpage .card .big{color:var(--ink)}
+.cards .card p{color:var(--ink-2)!important}
+/* 封面：巴洛克框換成 frame3 */
+.framed{aspect-ratio:4/5;max-width:380px;background:linear-gradient(140deg,#FFFFFF 0%,#F4F1EA 45%,#E7E2D8 100%);filter:none;
+  box-shadow:0 40px 60px -28px rgba(0,0,0,.6),0 8px 16px -8px rgba(0,0,0,.35),inset 0 0 0 1px rgba(255,255,255,.9),inset 2px 2px 0 1px #fff,inset -4px -4px 0 1px #D8D1C4,inset 0 0 0 12px #F2EEE6,inset 0 0 0 13px #D4CCBD}
+.framed .frm{display:none}
+.framed .pic{inset:30px;width:calc(100% - 60px);height:calc(100% - 60px)}
+.framed::after{content:"";position:absolute;inset:20px;pointer-events:none;border:5px solid transparent;
+  background:radial-gradient(circle,#C9BFAE 1.4px,transparent 1.9px) 0 0/7px 7px;
+  -webkit-mask:linear-gradient(#000 0 0) padding-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) padding-box exclude,linear-gradient(#000 0 0)}
+/* 攝影空格、英國文字日記：olive */
+.ph-empty,.day.text{background:var(--olive)!important}
+.day.text .day-cap b{color:var(--gold-2)}
+.dlg-panel{background:var(--paper)}
+.feature,.champ li{background:rgba(255,255,255,.4);border-color:rgba(43,42,36,.15)}
+.fly{background:rgba(224,208,182,.4)!important}

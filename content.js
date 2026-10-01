@@ -31,7 +31,7 @@ window.SITE = {
       eyebrow: 'Personal Portfolio · 2026',
       tagline: '臺北醫學大學 生物醫學工程學系',
       sub: '',   // 名字下方的一句話，空著就不顯示
-      status: '大一 · 正在尋找實驗室專題與產業交流的機會',   // 首頁名字下方的狀態，空著就不顯示
+      status: '',   // 首頁名字下方的狀態，空著就不顯示
       coords: '25.026° N, 121.561° E · TAIPEI',
       button: '認識我'
     },
@@ -72,16 +72,16 @@ window.SITE = {
     experience: {
       heading: 'Experience',
       sub: '經歷與領導',
-      // 每一筆可以加 page: 'pages/scouting.html' 這樣的網址，就會出現「了解更多」連結
+      // page: 'swim.html' 會出現「了解更多」；featured: true 會用金色標成特別的經歷
       items: [
         { when: '2016\n9 歲起', title: '參與童軍活動', desc: '多次參加臺灣各地的露營活動，從野外生活中學會團隊合作與照顧彼此。' },
-        { when: '2023', title: '第 25 屆世界童軍大露營 · 韓國', desc: '以參加人員身分出席，和來自世界各地的童軍一起生活與交流。' },
+        { when: '2023', title: '第 25 屆世界童軍大露營 · 韓國', desc: '以參加人員身分出席，和來自世界各地的童軍一起生活與交流。', featured: true },
         { when: '2023–2026\n高中', title: '國立新竹女子高級中學', desc: '' },
-        { when: '2024', title: '英國教育旅行', desc: '新竹女中暑期英國教育旅行（名額有限，經抽選錄取）。三週裡有兩週住在寄宿家庭，跟著當地學伴到 Ursuline High School 上課。', page: 'uk.html' },
-        { when: '2025\n高二', title: '游泳校隊副隊長', desc: '帶領近 30 人的泳隊，主導水運會開場表演、入隊測驗與招生影片。', page: 'swim.html' },
+        { when: '2024', title: '英國教育旅行', desc: '新竹女中暑期英國教育旅行（名額有限，經抽選錄取）。三週裡有兩週住在寄宿家庭，跟著當地學伴到 Ursuline High School 上課。', page: 'uk.html', featured: true },
+        { when: '2025\n高二', title: '游泳校隊副隊長', desc: '帶領近 30 人的泳隊，主導水運會開場表演、入隊測驗與招生影片。', page: 'swim.html', featured: true },
         { when: '2025\n高二', title: '班長 · 交通服務隊隊長', desc: '與游泳校隊副隊長同時擔任，學會統籌事務，也為一群人負責。' },
         { when: '2026', title: '臺北醫學大學 生物醫學工程學系', desc: '進入大學，開始探索生醫工程的各種可能。' },
-        { when: '2027', title: '第 26 屆世界童軍大露營 · 波蘭', desc: '將擔任 IST（國際服務團隊）成員，從參加者轉換為服務者。', badge: '即將參加' }
+        { when: '2027', title: '第 26 屆世界童軍大露營 · 波蘭', desc: '將擔任 IST（國際服務團隊）成員，從參加者轉換為服務者。', badge: '即將參加', featured: true }
       ]
     },
 
@@ -115,7 +115,7 @@ window.SITE = {
       eyebrow: 'Personal Portfolio · 2026',
       tagline: 'Biomedical Engineering · Taipei Medical University',
       sub: '',
-      status: 'Year 1 · Open to lab projects and industry conversations',
+      status: '',
       coords: '25.026° N, 121.561° E · TAIPEI',
       button: 'Enter'
     },
@@ -157,13 +157,13 @@ window.SITE = {
       sub: '',
       items: [
         { when: '2016\nAge 9', title: 'Joined Scouting', desc: 'Took part in many camps across Taiwan, learning teamwork and how to look out for each other outdoors.' },
-        { when: '2023', title: '25th World Scout Jamboree · Korea', desc: 'Attended as a participant, living and exchanging ideas with scouts from around the world.' },
+        { when: '2023', title: '25th World Scout Jamboree · Korea', desc: 'Attended as a participant, living and exchanging ideas with scouts from around the world.', featured: true },
         { when: '2023–2026\nHigh School', title: "National Hsinchu Girls' Senior High School", desc: '' },
-        { when: '2024', title: 'Summer Programme in England', desc: 'Three weeks in England through Hsinchu Girls\u2019 summer programme (places by lottery): two weeks with a host family, attending classes with local buddies at Ursuline High School.', page: 'uk.html' },
-        { when: '2025\nGrade 11', title: 'Swim Team Vice-Captain', desc: 'Led a team of almost 30 swimmers, including the swim-meet opening show, tryouts and a recruitment video.', page: 'swim.html' },
+        { when: '2024', title: 'Summer Programme in England', desc: 'Three weeks in England through Hsinchu Girls\u2019 summer programme (places by lottery): two weeks with a host family, attending classes with local buddies at Ursuline High School.', page: 'uk.html', featured: true },
+        { when: '2025\nGrade 11', title: 'Swim Team Vice-Captain', desc: 'Led a team of almost 30 swimmers, including the swim-meet opening show, tryouts and a recruitment video.', page: 'swim.html', featured: true },
         { when: '2025\nGrade 11', title: 'Class President · Traffic Service Team Captain', desc: 'Held alongside the swim team role, learning to coordinate people and take responsibility for a group.' },
         { when: '2026', title: 'Taipei Medical University, Biomedical Engineering', desc: 'Started university and began exploring what biomedical engineering can do.' },
-        { when: '2027', title: '26th World Scout Jamboree · Poland', desc: 'Will serve on the International Service Team (IST), moving from participant to volunteer.', badge: 'Upcoming' }
+        { when: '2027', title: '26th World Scout Jamboree · Poland', desc: 'Will serve on the International Service Team (IST), moving from participant to volunteer.', badge: 'Upcoming', featured: true }
       ]
     },
 

@@ -1,0 +1,63 @@
+/* ==========================================================
+   全站色調：Black olive #42423A × Dun #E0D0B6（＋酒紅、緞金點綴）
+   相框樣式參考 frame3：白色木框、內圈一排小珠
+   ========================================================== */
+:root{
+  --olive:#42423A; --olive-2:#4E4E44; --dun:#E0D0B6; --dun-2:#D3C1A2; --paper:#F6F2EA;
+  --black:#42423A; --blue:#E0D0B6; --blue-2:#D3C1A2; --blue-deep:#7A6E55; --fog:#E0D0B6; --mist:#D3C1A2;
+  --ink:#2B2A24; --ink-2:#4A473D; --dusk:#4A473D; --cream:#F6F2EA; --cadet:#8E8775;
+  --wine:#7A1F2B; --gold:#CC9E4C; --gold-2:#E3BE78;
+  --dots:radial-gradient(circle,rgba(66,66,58,.26) 1.3px,transparent 1.6px);
+  --gdots:radial-gradient(circle,var(--gold) 1.4px,transparent 1.7px);
+  /* 柔和的漸層：olive → dun，多段緩和 */
+  --o2d:linear-gradient(180deg,#42423A 0%,#45453C 8%,#4C4B41 16%,#57554A 24%,#656155 32%,#767061 40%,#888170 48%,#9B9280 56%,#ADA28F 64%,#BEB29D 72%,#CDBFA8 80%,#D7C8AF 88%,#DDCDB4 94%,#E0D0B6 100%);
+  --d2o:linear-gradient(0deg,#42423A 0%,#45453C 8%,#4C4B41 16%,#57554A 24%,#656155 32%,#767061 40%,#888170 48%,#9B9280 56%,#ADA28F 64%,#BEB29D 72%,#CDBFA8 80%,#D7C8AF 88%,#DDCDB4 94%,#E0D0B6 100%);
+}
+html,body{background:var(--dun)}
+.name{color:#fff!important}
+
+/* ===== H：藍藻奶巧（底色 #C7D3DB）× Black olive ===== */
+:root{--blue:#C7D3DB;--fog:#C7D3DB;--mist:#B8C6D0;--dun-bg:#C7D3DB;--blue-deep:#5F6E78;--ink:#2E2C28;--ink-2:#4A4A46;--dusk:#4A4A46;
+  --dots:radial-gradient(circle,rgba(66,66,58,.24) 1.3px,transparent 1.6px);
+  --o2d:linear-gradient(180deg,#42423A 0%,#43443C 6%,#484841 12%,#4E4F49 19%,#575953 25%,#61645F 31%,#6C706D 38%,#787D7B 44%,#848A8A 50%,#91989A 56%,#9DA5A8 62%,#A8B1B6 69%,#B2BCC2 75%,#BBC6CC 81%,#C1CDD4 88%,#C6D1D9 94%,#C7D3DB 100%);
+  --d2o:linear-gradient(0deg,#42423A 0%,#43443C 6%,#484841 12%,#4E4F49 19%,#575953 25%,#61645F 31%,#6C706D 38%,#787D7B 44%,#848A8A 50%,#91989A 56%,#9DA5A8 62%,#A8B1B6 69%,#B2BCC2 75%,#BBC6CC 81%,#C1CDD4 88%,#C6D1D9 94%,#C7D3DB 100%)}
+html,body{background:#42423A}
+.sec.blue{background:var(--blue)}
+.sec.blue.from-dark{background:var(--o2d) top/100% 560px no-repeat,var(--blue)}
+.sec.dark.from-blue{background:var(--d2o) top/100% 560px no-repeat,var(--olive)}
+.tl .dot{background:var(--blue)}
+.tl li.gold .when,.hl{color:#8A6424}
+/* 網點：上下都淡出，不會出現一條切線 */
+.sec.blue::before{-webkit-mask-image:radial-gradient(ellipse 55% 42% at 100% 30%,#000 0%,transparent 70%)!important;mask-image:radial-gradient(ellipse 55% 42% at 100% 30%,#000 0%,transparent 70%)!important;top:560px!important}
+.sec.blue.alt::before{-webkit-mask-image:radial-gradient(ellipse 45% 38% at 0% 55%,#000 0%,transparent 72%)!important;mask-image:radial-gradient(ellipse 45% 38% at 0% 55%,#000 0%,transparent 72%)!important;top:0!important}
+/* 羽毛放到內容下面（相框、文字會蓋在羽毛上） */
+.feather-layer{z-index:1}
+.wrap{pointer-events:none} .wrap *{pointer-events:auto}
+.hero .wrap{z-index:5}
+.swan{z-index:3}
+/* 封面拿掉狀態後的間距 */
+.hero-meta{gap:14px 44px}
+/* Focus：三張橫排卡片 */
+.focus-grid{grid-template-columns:repeat(3,minmax(0,1fr));column-gap:22px}
+.focus-item{grid-column:auto;border-top:0;padding:30px 28px 32px;background:linear-gradient(140deg,#FFFFFF 0%,#F2F4F5 50%,#E3E8EB 100%);border-radius:2px;
+  box-shadow:0 30px 44px -28px rgba(20,24,28,.45),inset 0 0 0 1px rgba(255,255,255,.9),inset 0 0 0 8px #F1F3F4,inset 0 0 0 9px #CFD7DC}
+.looking{grid-column:1 / -1}
+@media (max-width:700px){.focus-grid{grid-template-columns:1fr}}
+/* 興趣：花體標題置中，不要小膠囊 */
+.gcard .pill{display:none}
+.gcard.glass{justify-content:center;text-align:center;align-items:center;min-height:320px}
+.gc-body h3.fancy{font-family:"Noto Serif Display","Cormorant Garamond",serif;font-weight:400;font-variation-settings:"wdth" 62.5;font-stretch:62.5%;font-size:clamp(48px,4.6vw,66px);letter-spacing:.02em;line-height:1;color:var(--ink)}
+.gc-body .fw{white-space:nowrap;display:inline-block}
+.gc-body .sw{font-family:"Pinyon Script",cursive;font-size:1.25em;line-height:0;margin-right:-.06em;position:relative;top:.08em;color:var(--wine);font-variation-settings:normal}
+.gc-zh{margin:10px 0 0;font-size:14px;letter-spacing:.3em;color:var(--blue-deep);font-weight:500}
+.gc-body .d{margin-top:16px}
+.gcard .no{display:none}
+/* About 照片：拿掉名字 */
+.about-photo.glass{padding:22px}
+.about-photo figcaption{display:none}
+/* 不會再滑出一段米色 */
+.foot{position:relative;z-index:2}
+.gcards{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:860px){.gcards{grid-template-columns:1fr}}
+.gc-body{width:100%}
+.gc-body h3.fancy{font-size:clamp(30px,2.9vw,44px)}
