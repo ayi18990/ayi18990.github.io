@@ -9,7 +9,7 @@ window.PAGE = {
     eyebrow: 'Experience · 新竹女中 · 高二',
     title: '游泳校隊副隊長',
     titleEn: 'Swim Team Vice-Captain',
-    meta: [['職務', '副隊長'], ['任期', '一年'], ['任命方式', '主動爭取，經核可後任職']],
+    meta: [['職務', '副隊長'], ['任期', '一年'], ['任命方式', '主動爭取']],
 
     s1: {
       no: '壹', heading: '參與背景',

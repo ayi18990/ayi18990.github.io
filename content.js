@@ -90,9 +90,9 @@ window.SITE = {
       heading: 'Interests',
       sub: '課本以外的我',
       items: [
-        { title: '吉他', en: 'Guitar', desc: '目前加入北醫吉他社，從和弦和刷法開始，一邊練習自己喜歡的歌。' },
+        { title: '吉他', en: 'Guitar', desc: '目前加入北醫吉他社，一邊精進技巧，一邊練習自己喜歡的歌。' },
         { title: '攝影', en: 'Photography', desc: '用鏡頭記錄旅行和日常。', page: 'photos.html' },
-        { title: '游泳', en: 'Swimming', desc: '高中游泳隊出身，到現在仍然很喜歡待在水裡。' }
+        { title: '游泳', en: 'Swimming', desc: '高中游泳隊出身，\n到現在仍然很喜歡待在水裡。' }
       ]
     },
 
@@ -172,7 +172,7 @@ window.SITE = {
       heading: 'Interests',
       sub: '',
       items: [
-        { title: 'Guitar', en: '吉他', desc: 'Now in the TMU Guitar Club, learning chords and strumming while practising songs I love.' },
+        { title: 'Guitar', en: '吉他', desc: 'Now in the TMU Guitar Club, refining my playing while practising songs I love.' },
         { title: 'Photography', en: '攝影', desc: 'I capture travel and everyday moments.', page: 'photos.html' },
         { title: 'Swimming', en: '游泳', desc: 'A former high-school swim team member who still loves being in the water.' }
       ]

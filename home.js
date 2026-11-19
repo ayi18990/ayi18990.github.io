@@ -15,7 +15,7 @@
     var out = '', parts = String(t == null ? '' : t).match(/[A-Za-z0-9'’.\-–—&%@\/+()]+|\s+|[\s\S]/g) || [];
     for (var i = 0; i < parts.length; i++) {
       var p = parts[i];
-      if (/^\s+$/.test(p)) { out += ' '; continue; }
+      if (/^\s+$/.test(p)) { out += /\n/.test(p) ? '<br>' : ' '; continue; }
       var chars = p.split('');
       while (i + 1 < parts.length && parts[i + 1].length === 1 && PUNCT.test(parts[i + 1])) chars.push(parts[++i]);
       out += '<span class="w">' + chars.map(function (c) { return '<span class="ch">' + esc(c) + '</span>'; }).join('') + '</span>';

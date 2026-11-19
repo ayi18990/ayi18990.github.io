@@ -11,7 +11,15 @@ window.PHOTOS = {
   vscoHandle: 'vsco.co/ayi18990',
 
   photos: [
-    // { src: 'photo-01.jpg', title: '', place: '', year: '' },
+    { src: 'photo-01.jpg' },
+    { src: 'photo-02.jpg' },
+    { src: 'photo-03.jpg' },
+    { src: 'photo-04.jpg' },
+    { src: 'photo-05.jpg' },
+    { src: 'photo-06.jpg' },
+    { src: 'photo-07.jpg' },
+    { src: 'photo-08.jpg' },
+    { src: 'photo-09.jpg' },
   ],
 
   zh: {
