@@ -48,7 +48,7 @@ html,body{background:#42423A}
 .gcard.glass{justify-content:center;text-align:center;align-items:center;min-height:320px}
 .gc-body h3.fancy{font-family:"Noto Serif Display","Cormorant Garamond",serif;font-weight:400;font-variation-settings:"wdth" 62.5;font-stretch:62.5%;font-size:clamp(48px,4.6vw,66px);letter-spacing:.02em;line-height:1;color:var(--ink)}
 .gc-body .fw{white-space:nowrap;display:inline-block}
-.gc-body .sw{font-family:"Pinyon Script",cursive;font-size:1.25em;line-height:0;margin-right:-.06em;position:relative;top:.08em;color:var(--wine);font-variation-settings:normal}
+.gc-body .sw{font-family:inherit;font-size:1em;line-height:inherit;margin-right:0;position:static;color:var(--wine)}
 .gc-zh{margin:10px 0 0;font-size:14px;letter-spacing:.3em;color:var(--blue-deep);font-weight:500}
 .gc-body .d{margin-top:16px}
 .gcard .no{display:none}

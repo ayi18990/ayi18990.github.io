@@ -16,8 +16,9 @@ window.SITE = {
 
   /* ---------- 聯絡方式 Links ---------- */
   email: 'yilu18990321@gmail.com',
-  instagram: 'https://www.instagram.com/ayi18990/',
-  instagramHandle: '@ayi18990',
+  // 暫時隱藏 Instagram：要恢復就把下面兩行前面的 // 拿掉
+  // instagram: 'https://www.instagram.com/ayi18990/',
+  // instagramHandle: '@ayi18990',
   linkedin: 'https://www.linkedin.com/in/ayi18990',   // LinkedIn 網址；空著就不會顯示
   linkedinHandle: 'ayi18990',
   vsco: 'https://vsco.co/ayi18990/gallery',   // 攝影作品集
@@ -45,6 +46,7 @@ window.SITE = {
     ],
 
     focus: {
+      hidden: true,   // 暫時隱藏；改成 false 就會顯示
       heading: 'Focus',
       items: [
         { no: '01', en: 'Biomaterials', title: '生醫材料', desc: '想了解一種材料如何從實驗室走進臨床、從材料銜接成產品，最後真正安全地用在人身上。' },
@@ -128,6 +130,7 @@ window.SITE = {
     ],
 
     focus: {
+      hidden: true,   // 暫時隱藏；改成 false 就會顯示
       heading: 'Focus',
       items: [
         { no: '01', en: '生醫材料', title: 'Biomaterials', desc: 'How a material moves from the lab into the clinic and from material into product, until it can be used safely in people.' },

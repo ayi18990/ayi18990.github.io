@@ -24,14 +24,15 @@
   }
   // 參考 font.jpg：第一個字母用草寫花體，其餘是細長大寫
   function fancy(t) {
-    return String(t).split(' ').map(function (w) { return '<span class="fw"><span class="sw">' + esc(w.charAt(0)) + '</span>' + esc(w.slice(1).toUpperCase()) + '</span>'; }).join(' ');
+    return String(t).split(' ').map(function (w) { return '<span class="fw"><span class="sw">' + esc(w.charAt(0).toUpperCase()) + '</span>' + esc(w.slice(1).toUpperCase()) + '</span>'; }).join(' ');
   }
-  function head(no, sub, h) { return '<p class="eyebrow rv"><b>' + no + '</b>' + esc(sub || '') + '</p><h2 class="h2 rv">' + mag(h) + '</h2>'; }
+  var secNo = 0;
+  function head(no, sub, h) { no = '0' + (++secNo); return '<p class="eyebrow rv"><b>' + no + '</b>' + esc(sub || '') + '</p><h2 class="h2 rv">' + mag(h) + '</h2>'; }
   function more(href, zh, en) { return '<a class="more" href="' + esc(href) + '">' + (lang === 'zh' ? zh : en) + ' <span aria-hidden="true">→</span></a>'; }
   var STAR = '<svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.6 6.2 5.8 11.4 12 12-6.2.6-11.4 5.8-12 12-.6-6.2-5.8-11.4-12-12C6.2 11.4 11.4 6.2 12 0z"/></svg>';
 
   function render() {
-    var T = S[lang], h = '';
+    var T = S[lang], h = ''; secNo = 0;
 
     // HERO
     h += '<section class="hero" id="top">' +
@@ -64,7 +65,7 @@
 
     // FOCUS
     var F = T.focus;
-    if (F) {
+    if (F && !F.hidden) { // 暫時隱藏：把 content.js 裡 focus 的 hidden 改成 false 就會回來
       h += '<section class="sec blue from-dark" id="focus"><div class="wrap">' + head('02', lang === 'zh' ? '方向' : '', F.heading) +
         '<div class="grid focus-grid">' + F.items.map(function (x) {
           return '<article class="focus-item rv"><p class="no">' + esc(x.no) + '</p><h3>' + txt(x.title) + '</h3><p class="en">' + esc(x.en) + '</p><p class="d">' + txt(x.desc) + '</p></article>';
